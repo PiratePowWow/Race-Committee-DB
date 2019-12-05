@@ -1,0 +1,5 @@
+FROM postgres:12.1-alpine
+COPY credentials $postgresHome/credentials
+ENV POSTGRES_DB_FILE $postgresHome/credentials/POSTGRES_DB.txt
+ENV POSTGRES_USER_FILE $postgresHome/credentials/POSTGRES_USER.txt
+ENV POSTGRES_PASSWORD_FILE $postgresHome/credentials/POSTGRES_PASSWORD.txt
